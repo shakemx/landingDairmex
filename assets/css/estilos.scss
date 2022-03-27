@@ -28,6 +28,10 @@ span {
   background-color: $fondo;
 }
 
+section{
+  overflow: hidden;
+}
+
 h1,
 h2 {
   font-family: "GlacialIndifference-Regular", sans-serif;
@@ -39,6 +43,7 @@ h5,
 h6 {
   font-family: "Roboto-Regular", sans-serif;
 }
+
 
 a{
     text-decoration: none;
