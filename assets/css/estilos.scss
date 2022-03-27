@@ -1,0 +1,332 @@
+//--------------------------
+// Patrones de CSS
+//--------------------------
+$primario: #0f69d4;
+$texto: #4e5152;
+$fondo: #f5f5f5;
+
+@font-face {
+  font-family: "TT Commons PRO", sans-serif;
+  src: local("TT Commons PRO"),
+    url("/assets/fonts/tt_commons_pro_expanded_regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Roboto-Regular", sans-serif;
+  src: local("Roboto-Regular"),
+    url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GlacialIndifference-Regular", sans-serif;
+  src: local("GlacialIndifference-Regular"),
+    url("/assets/fonts/GlacialIndifference-Regular.otf") format("opentype");
+}
+
+body,
+span {
+  font-family: "TT Commons Regular", sans-serif;
+  color: $texto;
+  background-color: $fondo;
+}
+
+h1,
+h2 {
+  font-family: "GlacialIndifference-Regular", sans-serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto-Regular", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+td {
+  font-size: 14px;
+}
+
+.commons {
+  font-family: "TT Commons PRO", sans-serif !important;
+}
+.roboto {
+  font-family: "Roboto-Regular", sans-serif;
+}
+.glacial {
+  font-family: "GlacialIndifference-Regular", sans-serif;
+}
+
+.color-primario {
+  color: $primario;
+}
+
+.color-blanco {
+  color: $fondo;
+}
+
+.bg-primario {
+  background-color: $primario;
+}
+
+.accion {
+  border: 2px solid $primario;
+  border-radius: 5px;
+  padding: 5px 20px;
+  color: $primario;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.accion:hover {
+  border: 2px solid $fondo;
+  border-radius: 5px;
+  padding: 5px 20px;
+  color: $fondo;
+  background-color: $primario;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: $fondo 0px 0px 10px;
+}
+
+.hero {
+  position: relative;
+}
+
+.imagen-hero {
+  transition: visibility 0.5s linear, opacity 0.5s linear;
+  width: 100%;
+  height: 100vh;
+  filter: opacity(50%);
+  -webkit-filter: opacity(50%);
+}
+
+.logoPortada {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroSubtitulo {
+  position: absolute;
+  top: 85%;
+  left: 25%;
+}
+
+.heroSubtitulo-2 {
+  position: absolute;
+  top: 85%;
+  right: 25%;
+}
+
+.heroSubtitulo-3 {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroSubtitulo-4 {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logoAccion {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  width: auto;
+}
+
+
+ul {
+  list-style: none;
+}
+ul li.dairmex::before {
+  content: "";
+  background-image: url("/assets/img/ok.png") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: 0.1rem;
+}
+
+.img-accion {
+  height: 100px;
+  width: auto;
+}
+
+.table > :not(caption) > * > * {
+  color: $primario;
+  padding: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba($color: $primario, $alpha: 0.4);
+}
+
+.renovaciones {
+  color: $texto !important;
+}
+
+.img-accion-2 {
+  height: 450px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.accionFinal {
+  color: $fondo;
+  border-radius: 15px;
+  background-color: $primario;
+  padding: 15px 20px;
+  font-size: 30px;
+  border: 2px solid $fondo;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.accionFinal:hover {
+  color: $primario;
+  background-color: transparent;
+  border: 2px solid $primario;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .heroSubtitulo {
+      position: absolute;
+      top: 85%;
+      left: 15%;
+      
+    }
+    .heroSubtitulo-2 {
+      position: absolute;
+      top: 85%;
+      right: 15%;
+    }
+    .logoPortada{
+        height: auto;
+        width: 95%;
+    }
+    .heroSubtitulo-3{
+        top: 15%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  .logoAccion{
+    display: none;
+    }
+  
+    .heroSubtitulo-4{
+      bottom: 5%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+}
+  
+
+
+@media only screen and (max-width: 540px) {
+    .heroSubtitulo,
+    .heroSubtitulo-2 {
+      position: absolute;
+      top: 60%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .logoPortada{
+        height: auto;
+        width: 95%;
+    }
+    .heroSubtitulo-3{
+        top: 15%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  .logoAccion{
+    display: none;
+    }
+  
+    .heroSubtitulo-4{
+      bottom: 5%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+}
+  
+
+//---------------------------------------
+// Sección Top Scroll
+//---------------------------------------
+
+#topscroll {
+    display: inline-block;
+    background-color: $primario;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #topscroll::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: $fondo;
+  }
+  #topscroll:hover {
+    cursor: pointer;
+    background-color: rgba($color: $primario, $alpha: 0.6);
+  }
+  #topscroll:active {
+    background-color: rgba($color: $primario, $alpha: 0.8);
+  }
+  #topscroll.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
